@@ -1,9 +1,9 @@
 
 
 ```python
-Observation1: Last 100 tweets refeering to CBS and FOX is mostly Positive.
-Observation2: Last 100 tweets refeering to BBC and CNN are  mostly Poitive or neutral sentiments.
-Observation3: Last 100 tweets refeering to CNN are  mostly neutral sentiments.
+Observation1: Last 100 tweets reffering to CBS and FOX is mostly Positive.
+Observation2: Last 100 tweets reffering to BBC and CNN are  mostly Poitive or neutral sentiments.
+Observation3: Last 100 tweets reffering to nytimes are  mostly negetive sentiments.
 ```
 
 
@@ -113,56 +113,56 @@ sentiments_pd.head()
     <tr>
       <th>0</th>
       <td>nytimes</td>
-      <td>0.1531</td>
-      <td>Tue Jan 09 02:21:03 +0000 2018</td>
-      <td>0.798</td>
-      <td>0.088</td>
-      <td>0.113</td>
-      <td>Trump's lawyers are assessing the risks of all...</td>
+      <td>0.7096</td>
+      <td>Tue Jan 09 18:33:08 +0000 2018</td>
+      <td>0.763</td>
+      <td>0.000</td>
+      <td>0.237</td>
+      <td>In a visit to China, Emmanuel Macron offered t...</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
       <td>nytimes</td>
       <td>0.0000</td>
-      <td>Tue Jan 09 02:11:06 +0000 2018</td>
+      <td>Tue Jan 09 18:23:33 +0000 2018</td>
       <td>1.000</td>
       <td>0.000</td>
       <td>0.000</td>
-      <td>RT @dougmillsnyt: .@realDonaldTrump watches th...</td>
+      <td>RT @mairalg: How have @nytimes readers reacted...</td>
       <td>2</td>
     </tr>
     <tr>
       <th>2</th>
       <td>nytimes</td>
       <td>0.0000</td>
-      <td>Tue Jan 09 02:02:05 +0000 2018</td>
+      <td>Tue Jan 09 18:10:13 +0000 2018</td>
       <td>1.000</td>
       <td>0.000</td>
       <td>0.000</td>
-      <td>Evening Briefing: Here's what you need to know...</td>
+      <td>Opinion: A worldwide influenza pandemic is lit...</td>
       <td>3</td>
     </tr>
     <tr>
       <th>3</th>
       <td>nytimes</td>
-      <td>-0.2924</td>
-      <td>Tue Jan 09 01:47:05 +0000 2018</td>
-      <td>0.910</td>
+      <td>-0.4215</td>
+      <td>Tue Jan 09 18:00:04 +0000 2018</td>
+      <td>0.719</td>
+      <td>0.191</td>
       <td>0.090</td>
-      <td>0.000</td>
-      <td>RT @kenvogel: Fusion GPS is STILL doing resear...</td>
+      <td>RT @nytvideo: “When my son told me he wasn’t a...</td>
       <td>4</td>
     </tr>
     <tr>
       <th>4</th>
       <td>nytimes</td>
-      <td>0.0258</td>
-      <td>Tue Jan 09 01:34:02 +0000 2018</td>
-      <td>0.458</td>
-      <td>0.268</td>
-      <td>0.275</td>
-      <td>The best and worst of the Golden Globes\nhttps...</td>
+      <td>0.2263</td>
+      <td>Tue Jan 09 17:50:48 +0000 2018</td>
+      <td>0.899</td>
+      <td>0.000</td>
+      <td>0.101</td>
+      <td>Breaking News: Joe Arpaio, the former Arizona ...</td>
       <td>5</td>
     </tr>
   </tbody>
@@ -264,7 +264,7 @@ sentiment
     <tr>
       <th>0</th>
       <td>BBC</td>
-      <td>0.091436</td>
+      <td>0.128065</td>
     </tr>
     <tr>
       <th>1</th>
@@ -274,17 +274,17 @@ sentiment
     <tr>
       <th>2</th>
       <td>CNN</td>
-      <td>0.075155</td>
+      <td>0.078330</td>
     </tr>
     <tr>
       <th>3</th>
       <td>fox</td>
-      <td>0.237168</td>
+      <td>0.239635</td>
     </tr>
     <tr>
       <th>4</th>
       <td>nytimes</td>
-      <td>0.010619</td>
+      <td>-0.027433</td>
     </tr>
   </tbody>
 </table>
