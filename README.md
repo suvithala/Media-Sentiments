@@ -1,10 +1,9 @@
 
 
 ```python
-Observation1: Last 100 tweets refeering to FOX is mostly Positive.
-Observation2: Last 100 tweets refeering to BBC and NYTimes are  mostly neutral sentiments.
-Observation3: Last 100 tweets refeering to CNN are  mostly negetive sentiments.   
-Observation4: CBS is either neutral or Positive sentiments.
+Observation1: Last 100 tweets refeering to CBS and FOX is mostly Positive.
+Observation2: Last 100 tweets refeering to BBC and CNN are  mostly Poitive or neutral sentiments.
+Observation3: Last 100 tweets refeering to CNN are  mostly neutral sentiments.
 ```
 
 
@@ -114,56 +113,56 @@ sentiments_pd.head()
     <tr>
       <th>0</th>
       <td>nytimes</td>
-      <td>0.7841</td>
-      <td>Sun Jan 07 01:22:59 +0000 2018</td>
-      <td>0.707</td>
-      <td>0.000</td>
-      <td>0.293</td>
-      <td>Want to be more well read in 2018? Sync your c...</td>
+      <td>0.1531</td>
+      <td>Tue Jan 09 02:21:03 +0000 2018</td>
+      <td>0.798</td>
+      <td>0.088</td>
+      <td>0.113</td>
+      <td>Trump's lawyers are assessing the risks of all...</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
       <td>nytimes</td>
-      <td>-0.2960</td>
-      <td>Sun Jan 07 01:05:58 +0000 2018</td>
-      <td>0.820</td>
-      <td>0.180</td>
+      <td>0.0000</td>
+      <td>Tue Jan 09 02:11:06 +0000 2018</td>
+      <td>1.000</td>
       <td>0.000</td>
-      <td>Where pot entrepreneurs go when the banks just...</td>
+      <td>0.000</td>
+      <td>RT @dougmillsnyt: .@realDonaldTrump watches th...</td>
       <td>2</td>
     </tr>
     <tr>
       <th>2</th>
       <td>nytimes</td>
-      <td>-0.6908</td>
-      <td>Sun Jan 07 00:49:16 +0000 2018</td>
-      <td>0.657</td>
-      <td>0.343</td>
+      <td>0.0000</td>
+      <td>Tue Jan 09 02:02:05 +0000 2018</td>
+      <td>1.000</td>
       <td>0.000</td>
-      <td>Gunmen Kill 13 in Restive Southern Region of S...</td>
+      <td>0.000</td>
+      <td>Evening Briefing: Here's what you need to know...</td>
       <td>3</td>
     </tr>
     <tr>
       <th>3</th>
       <td>nytimes</td>
-      <td>0.0000</td>
-      <td>Sun Jan 07 00:34:40 +0000 2018</td>
-      <td>1.000</td>
+      <td>-0.2924</td>
+      <td>Tue Jan 09 01:47:05 +0000 2018</td>
+      <td>0.910</td>
+      <td>0.090</td>
       <td>0.000</td>
-      <td>0.000</td>
-      <td>Opinion: The Alt-Right’s Asian Fetish https://...</td>
+      <td>RT @kenvogel: Fusion GPS is STILL doing resear...</td>
       <td>4</td>
     </tr>
     <tr>
       <th>4</th>
       <td>nytimes</td>
-      <td>0.4404</td>
-      <td>Sun Jan 07 00:26:30 +0000 2018</td>
-      <td>0.828</td>
-      <td>0.000</td>
-      <td>0.172</td>
-      <td>Why more men are choosing nursing as a profess...</td>
+      <td>0.0258</td>
+      <td>Tue Jan 09 01:34:02 +0000 2018</td>
+      <td>0.458</td>
+      <td>0.268</td>
+      <td>0.275</td>
+      <td>The best and worst of the Golden Globes\nhttps...</td>
       <td>5</td>
     </tr>
   </tbody>
@@ -232,6 +231,69 @@ plt.show()
 
 
 ```python
+sentiment = sentiments_pd.groupby(["Account"], as_index = False)['Compound'].mean()
+sentiment
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Account</th>
+      <th>Compound</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BBC</td>
+      <td>0.091436</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>CBS</td>
+      <td>0.378797</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CNN</td>
+      <td>0.075155</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>fox</td>
+      <td>0.237168</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>nytimes</td>
+      <td>0.010619</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
 plt.figure(figsize=(15,10))
 sns.set()
 colors =["cyan", "green","red", "blue", "yellow"]
@@ -244,5 +306,5 @@ plt.show()
 ```
 
 
-![png](output_8_0.png)
+![png](output_9_0.png)
 
